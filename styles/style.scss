@@ -1,0 +1,44 @@
+@use '_reset.scss';
+@use '_variables.scss';
+@import '_header.scss';
+@import '_navi.scss';
+@import '_music.scss';
+@import '_discografie.scss';
+@import '_footer.scss';
+
+
+// TODO'S
+// Musikrechte
+// Shadow für die Waben
+// Albencover in Waben einbauen
+// Alben verlinken zu Albumseite -> später Bilder verlinken in Handysicht
+// Albumseiten mit Kontent füllen(Titel, Texte)
+
+body{
+    font-family: 'Permanent Marker', cursive;
+    background-color: variables.$faber1;
+}
+
+.hauptcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+main{
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    color: variables.$faber3;
+    text-transform: uppercase;
+    padding: 1px;
+    letter-spacing: 6px;
+    font-weight: 50;
+    font-size: 2.5rem;
+    // position: relative;
+    background: linear-gradient(to right, variables.$faber1, variables.$faber2, variables.$faber1);
+    border-top: 1px solid variables.$faber3;
+    border-bottom: 1px solid variables.$faber3;
+}

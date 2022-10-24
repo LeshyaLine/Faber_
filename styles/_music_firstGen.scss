@@ -1,0 +1,78 @@
+@use '_variables.scss';
+
+.musicgridcontainer{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-areas: 
+    "eins zwei fünf fünf fünf zehn "
+    "eins drei drei sechs acht zehn"
+    "vier drei drei sechs acht neun"
+    "zwölf zwölf zwölf sechs sieben sieben"
+    "elf elf elf dreizehn sieben sieben";
+
+    background-color: variables.$faber3;
+    height: 80vh;
+    width: 100vw;
+
+}
+
+.griditem{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 0.5rem;
+    color: variables.$faber2;
+    border: 1px solid variables.$faber2;
+    box-shadow: 8px 5px 5px variables.$faber2;
+}
+
+.eins{
+    grid-area: eins;
+}
+.zwei{
+    grid-area: zwei;
+}
+.drei{
+    grid-area: drei;
+}
+.vier{
+    grid-area: vier;
+}
+.fuenf{
+    grid-area: fünf;
+}
+.sechs{
+    grid-area: sechs;
+}
+.sieben{
+    grid-area: sieben;
+}
+.acht{
+    grid-area: acht;
+}
+.neun{
+    grid-area: neun;
+}
+.zehn{
+    grid-area: zehn;
+}
+.elf{
+    grid-area: elf;
+}
+.zwölf{
+    grid-area: zwölf;
+}
+.dreizehn{
+    grid-area: dreizehn;
+}
+
+
+// TABLET
+
+@media only screen and (min-width: 600px) and (max-width: 1024px){}
+
+
+
+//DESKTOP
+
+@media only screen and (min-width: 1024px){}

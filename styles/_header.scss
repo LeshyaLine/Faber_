@@ -1,0 +1,118 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // height: 93vh;
+    position: relative;
+    text-align: center;
+    padding: 0 2em;
+
+}
+ .titelbildcontainer{
+    width: 60vw;
+    display: grid;
+    grid-template-areas: 
+    "hb1 hb2"
+    "hb3 hb4";
+    margin: 1rem auto;            
+}
+
+img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#headbox1{
+    grid-area: hb1;
+}
+
+#headbox2{
+    grid-area: hb2;
+}
+
+#headbox3{
+    grid-area: hb3;
+}
+#headbox4{
+    grid-area: hb4;
+}
+
+.title{
+    width: 75vw;
+    margin: 3rem;
+    line-height: 2.5;
+    border-top: 3px solid variables.$faber3;
+    border-bottom: 3px solid variables.$faber3;
+}
+
+h1 { 
+    text-align: center;
+    color: variables.$faber3;
+    text-transform: uppercase;
+    padding: 1px;
+    letter-spacing: 5px;
+    font-weight: 80;
+    // position: relative;
+    background: linear-gradient(to right, variables.$faber1, variables.$faber2, variables.$faber1);
+  }
+
+// TABLET
+
+@media only screen and (min-width: 600px) and (max-width: 1024px){
+    
+    .titelbildcontainer{
+        width: 60vw;
+        display: grid;
+        grid-template-areas: 
+        "hb1 hb2"
+        "hb3 hb4";
+        margin: 1rem auto;            
+    }
+    
+    .headbox{
+        flex: 1;
+        background-size: cover;
+        margin: 15px;
+        box-shadow: 10px 5px 5px variables.$faber2;    
+    }
+
+
+}
+
+//DESKTOP
+
+// IMAGES passen sich noch nicht der finalen Größe an
+
+
+@media only screen and (min-width: 1024px){
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 93vh;
+        position: relative;
+        text-align: center;
+        padding: 0 2em;
+
+    }
+
+    .titelbildcontainer{
+        display: flex;
+        height: 50vh;
+        width: 80%;
+        margin-top: 11vh;
+    }
+    .headbox{
+        // flex: 1;
+
+        margin: 15px;
+        box-shadow: 10px 5px 5px variables.$faber2;    
+        img{
+            max-width: auto;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

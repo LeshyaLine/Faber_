@@ -1,0 +1,8 @@
+@use '../../styles/style.scss';
+@use '../../styles/navi';
+@use '../../styles/footer';
+@use '../../styles/variables';
+
+body{
+    background-color: variables.$faber1;
+}

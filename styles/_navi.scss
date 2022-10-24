@@ -1,0 +1,60 @@
+@use '_variables.scss';
+
+.navicontainer{
+    width: 100vw;
+    //box-shadow: 8px 5px 5px variables.$faber2;
+     background: linear-gradient(to right, variables.$faber1, variables.$faber2, variables.$faber1);
+
+    .navitab{
+        display: flex;
+        justify-content: center;
+        height: 2rem;
+        color: variables.$faber3;
+        // border: 2px solid variables.$faber2;
+        letter-spacing: 0.1rem;
+        font-size: 1.5rem;      
+    }
+}
+
+
+// TABLET
+
+// @media only screen and (min-width: 600px) and (max-width: 1024px){}
+
+
+// DESKTOP
+@media only screen and (min-width: 1024px){
+    .navicontainer{
+        display: flex;
+        flex-direction: row; /*default-Wert*/
+        width: 100%;
+        height: 80px;
+        box-shadow: 8px 5px 5px variables.$faber2;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+      
+      .navitab {
+        height: auto;
+        align-items: center;
+        flex: 1;
+        border: 2px solid variables.$faber2;
+      }
+      
+      .navitab:hover{
+        transition: all 0.1s ease;
+        background-color: variables.$faber3;
+        font-size: 40px;
+        text-shadow: 3px 4px variables.$faber2;
+        color: variables.$faber1;
+      }
+      
+      a{
+        font-size: 30px;
+        letter-spacing: 8px;
+        //text-decoration: underline overline $faber3;
+      
+      }
+    }
+}
