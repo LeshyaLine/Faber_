@@ -316,29 +316,52 @@ h1 {
   box-shadow: 10px 5px 5px hsl(247deg, 19%, 15%);
   padding-top: 2rem;
   margin: 0.5rem;
-  width: 75%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.songcontainer {
-  display: flex;
-  margin: 2rem;
-  min-width: 60vw;
-}
 .songcontainer div {
-  margin-left: 10rem;
+  margin-left: 2rem;
+  padding: 1rem;
 }
 .songcontainer ol li {
   color: #fed8c5;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
-ol li:hover {
-  color: hsl(247deg, 19%, 15%);
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .songcontainer {
+    display: flex;
+  }
+  .songcontainer ol li {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
 }
-
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  #orpheum {
+    display: block;
+  }
+  #orpheum ol li {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .songcontainer {
+    display: flex;
+  }
+  .songcontainer ol li {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .songcontainer ol li:hover {
+    color: hsl(247deg, 19%, 15%);
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
