@@ -1,0 +1,30 @@
+@use '_variables.scss';
+
+ .albumcontainer {
+    border: 3px solid variables.$faber2;
+    box-shadow: 10px 5px 5px variables.$faber2;
+    padding-top: 2rem;   
+    margin: 0.5rem;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .songcontainer{
+    display: flex;
+    margin: 2rem;
+    min-width: 60vw;
+    div{
+        margin-left: 10rem;
+    }
+        ol li{
+            color: variables.$faber3;
+            font-size: 1.5rem;
+        }
+ }
+
+ ol li:hover{
+    color: variables.$faber2;
+  }
+
