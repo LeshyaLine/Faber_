@@ -1,3 +1,4 @@
+@import './variables';
 .header{
     display: flex;
     flex-direction: column;
@@ -8,6 +9,7 @@
     padding: 0 2em;
 
 }
+
  .titelbildcontainer{
     width: 60vw;
     display: grid;
@@ -40,13 +42,14 @@ img{
 
 .title{
     width: 75vw;
-    margin: 3rem;
+    margin: 5rem;
     line-height: 2.5;
     border-top: 3px solid variables.$faber3;
     border-bottom: 3px solid variables.$faber3;
 }
 
 h1 { 
+    font-size: 2.5rem;
     text-align: center;
     color: variables.$faber3;
     text-transform: uppercase;
@@ -76,8 +79,6 @@ h1 {
         margin: 15px;
         box-shadow: 10px 5px 5px variables.$faber2;    
     }
-
-
 }
 
 //DESKTOP

@@ -1,62 +1,177 @@
 @use '_variables.scss';
 
-//NAvitab mit den alben, die sich dann ausklappen nach unten.
+//MOBILE DEFAULT
+#navicontainer{
+  width: 100vw;
+  box-shadow: 8px 5px 5px variables.$faber2;
+  background: linear-gradient(to right, variables.$faber1, variables.$faber2, variables.$faber1);
+}
+  .navitab{
+     display: flex;
+     justify-content: center;
+      color: variables.$faber3;
+      letter-spacing: 0.1rem;
+      font-size: 1.5rem;
+      border: 1px solid variables.$faber2;
 
-.navicontainer{
-    width: 100vw;
-    //box-shadow: 8px 5px 5px variables.$faber2;
-     background: linear-gradient(to right, variables.$faber1, variables.$faber2, variables.$faber1);
+  }
 
-    .navitab{
-        display: flex;
-        justify-content: center;
-        height: 2rem;
-        color: variables.$faber3;
-        // border: 2px solid variables.$faber2;
-        letter-spacing: 0.1rem;
-        font-size: 1.5rem;      
-    }
+  /* dropdown*/
+  nav ul ul li {
+    // width: 600px;
+     width:50%;
+    // float: none;
+    height: auto;
+    display:list-item;
+    //position: relative;
+    background: linear-gradient(to right, variables.$faber2, variables.$faber1, variables.$faber1);
+    box-shadow: 8px 5px 5px variables.$faber2;
+   // border: 1px solid variables.$faber2;
+  }
+
+  // dropdown unsichtbar machen
+  nav ul ul {
+    display: none;
+    position: relative;
+    top: 80px; /* the height of the main nav */
+}
+  /* Dropdown bei Hover sichtbar machen */
+  nav ul li:hover > ul {
+    display: list-item;
+  }
+
+ nav ul {
+   align-items: center;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+nav a {
+  // display:block;
+  padding:0 10px;
+  color: variables.$faber3;
+  font-size:1.5rem;
+  line-height: 50px;
+  text-decoration:none;
 }
 
 
-// TABLET
+  /* Symbol einfügen, wo das dropdown ist*/
+  li > a:after { content:  ' +'; }
+  li > a:only-child:after { content: ''; }
 
-// @media only screen and (min-width: 600px) and (max-width: 1024px){}
 
-
+//******************************************************************
 // DESKTOP
-@media only screen and (min-width: 1024px){
-    .navicontainer{
-        display: flex;
-        flex-direction: row; /*default-Wert*/
-        width: 100%;
-        height: 80px;
-        box-shadow: 8px 5px 5px variables.$faber2;
-        position: sticky;
-        top: 0;
-        z-index: 10;
 
-      
-      .navitab {
-        height: auto;
-        align-items: center;
-        flex: 1;
-        border: 2px solid variables.$faber2;
-      }
-      
+@media only screen and (min-width: 1024px){
+  .sticky{    
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;}
+
+  #navicontainer {
+    //Verhalten
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+
+    //Aussehen
+    background: linear-gradient(to right, variables.$faber1, variables.$faber2, variables.$faber1);
+    box-shadow: 8px 5px 5px variables.$faber2;
+  }
+
+  .navitab{
+    // display:inline-block;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+
+    //teilt den Platz gleichnäßig auf
+    //flex: 1;
+    width: 33%;
+    color: variables.$faber3;
+    letter-spacing: 0.1rem;
+    font-size: 1.5rem;
+    height: 100%;
+    // border: 2px solid variables.$faber2;
+    // border: 2px solid red;
+    }
+
+   nav ul {
+    align-items: center;
+    // height: 100%;
+    // width: ;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+
+     }
+
+     nav a {
+       //  display:block;
+        padding:0 10px;
+        color: variables.$faber3;
+        font-size:1.8rem;
+        line-height: 60px;
+        text-decoration:none;
+     }
+
       .navitab:hover{
         transition: all 0.1s ease;
         background-color: variables.$faber3;
         font-size: 40px;
         text-shadow: 3px 4px variables.$faber2;
+      }
+
+      .navitab:hover > a{
+        transition: all 0.1s ease;
         color: variables.$faber1;
+        font-size: 40px;
+        text-shadow: 3px 5px variables.$faber2;
       }
-      
-      a{
-        font-size: 30px;
-        letter-spacing: 8px;
-        //text-decoration: underline overline $faber3;
-      
-      }
-    }
+
+  /* Dropdown unsichtbar machen */
+  nav ul ul {
+      display: none;
+      position: absolute;
+      top: 80px; /* the height of the main nav */
+  }
+
+  /* Dropdown bei Hover sichtbar machen */
+  nav ul li:hover > ul {
+    display: list-item;
+  }
+
+  /* dropdown*/
+  nav ul ul li {
+    // width: 600px;
+    width: 33.3%;
+    // width:100%;
+    float: none;
+    height: auto;
+    display:list-item;
+    position: relative;
+    left: 33.3%;
+    background: linear-gradient(to right, variables.$faber1, variables.$faber2, variables.$faber1);
+    box-shadow: 8px 5px 5px variables.$faber2;
+    // border: 1px solid variables.$faber2;
+    text-align: center;
+
+  }
+  nav ul ul li:hover{
+    transition: all 0.1s ease;
+    // background-color: variables.$faber3;
+    font-size: 40px;
+    text-shadow: 3px 4px variables.$faber2;
+  }
+
 }
